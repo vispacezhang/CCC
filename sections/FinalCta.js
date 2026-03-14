@@ -8,7 +8,7 @@ export default function FinalCta() {
           <div>
             <h2 className="text-3xl font-semibold text-white">开启您的AI转型之旅</h2>
             <p className="mt-3 text-sm text-slate-200">预约AI咨询，获取企业级AI战略与落地方案。</p>
-            <p className="mt-2 text-sm text-slate-400">seaai@example.com</p>
+            <p className="mt-2 text-sm text-slate-400">zhangliwei.superman@gmail.com</p>
           </div>
           <Link href="/contact" className="cta-primary">
             预约AI咨询

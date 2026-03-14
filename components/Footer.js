@@ -37,7 +37,7 @@ export default function Footer() {
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-400">联系</p>
             <div className="mt-4 space-y-2 text-sm text-slate-200">
               <p>上海 | 深圳 | 新加坡</p>
-              <p>seaai@example.com</p>
+              <p>zhangliwei.superman@gmail.com</p>
               <p>企业AI转型与战略咨询</p>
             </div>
           </div>
