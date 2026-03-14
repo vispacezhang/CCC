@@ -2,19 +2,22 @@
 
 const posts = [
   {
-    title: "中国企业AI转型指南",
-    summary: "从组织能力、数据资产到AI治理的系统路线。",
-    date: "2026-03-01"
+    title: "AI+制造专项行动实施意见要点",
+    summary: "政策驱动下的制造业AI落地路径。",
+    date: "2026-01-07",
+    href: "/insights/ai-plus-manufacturing-2026"
   },
   {
-    title: "AI Agent企业应用",
-    summary: "将AI Agent嵌入流程，让业务决策更智能。",
-    date: "2026-02-18"
+    title: "生成合成内容标识办法落地",
+    summary: "企业内容治理与合规的新基线。",
+    date: "2025-03-14",
+    href: "/insights/ai-content-labeling-2025"
   },
   {
-    title: "企业如何利用AI提升效率",
-    summary: "以可量化KPI驱动AI落地与ROI回报。",
-    date: "2026-02-02"
+    title: "供应链Agentic AI趋势",
+    summary: "岗位与流程重构将如何发生。",
+    date: "2026-02-25",
+    href: "/insights/agentic-ai-supply-chain-2026"
   }
 ];
 
@@ -34,7 +37,9 @@ export default function Blog() {
               <h3 className="mt-4 text-lg font-semibold text-white">{post.title}</h3>
               <p className="mt-3 text-sm text-slate-200">{post.summary}</p>
               <div className="mt-auto pt-6">
-                <span className="text-xs uppercase tracking-[0.2em] text-accent">阅读洞察 →</span>
+                <a href={post.href} className="text-xs uppercase tracking-[0.2em] text-accent">
+                  阅读洞察 →
+                </a>
               </div>
             </article>
           ))}

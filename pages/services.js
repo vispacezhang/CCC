@@ -1,6 +1,5 @@
 ﻿import Head from "next/head";
 import SectionHeader from "../components/SectionHeader";
-import Services from "../sections/Services";
 import FinalCta from "../sections/FinalCta";
 
 const serviceDeep = [
@@ -36,6 +35,30 @@ const serviceDeep = [
   }
 ];
 
+const serviceCases = [
+  {
+    stage: "认知唤醒",
+    title: "集团高管AI共识工作坊",
+    industry: "制造业",
+    challenge: "AI认知碎片化，缺少统一战略语言与落地优先级。",
+    outcome: "形成AI转型路线图与三大优先场景，启动试点团队。"
+  },
+  {
+    stage: "流程重构",
+    title: "订单与供应链协同Agent",
+    industry: "商贸流通",
+    challenge: "跨部门流程依赖人工协调，响应慢且易出错。",
+    outcome: "关键流程自动化率提升45%，异常响应时间缩短60%。"
+  },
+  {
+    stage: "战略跃迁",
+    title: "AI驱动的客户增长引擎",
+    industry: "能源服务",
+    challenge: "存量客户运营效率低，缺乏可复制增长模型。",
+    outcome: "客户转化率提升18%，形成可量化的AI增长指标体系。"
+  }
+];
+
 export default function ServicesPage() {
   return (
     <>
@@ -67,7 +90,30 @@ export default function ServicesPage() {
           </div>
         </div>
       </section>
-      <Services />
+      <section className="section bg-ink/80">
+        <div className="container-pad">
+          <SectionHeader
+            eyebrow="Service Outcomes"
+            title="三阶方法论下的服务案例"
+            subtitle="以认知、流程、战略为主线，形成可复制的AI转型成果。"
+          />
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {serviceCases.map((item) => (
+              <div key={item.title} className="card">
+                <div className="flex items-center justify-between text-xs uppercase tracking-[0.2em] text-slate-400">
+                  <span>{item.stage}</span>
+                  <span>{item.industry}</span>
+                </div>
+                <h3 className="mt-4 text-lg font-semibold text-white">{item.title}</h3>
+                <p className="mt-3 text-sm text-slate-200">{item.challenge}</p>
+                <div className="mt-4 rounded-xl border border-white/10 bg-white/5 p-3 text-sm text-slate-100">
+                  {item.outcome}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <FinalCta />
     </>
   );

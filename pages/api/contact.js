@@ -1,16 +1,16 @@
-import { Resend } from "resend";
+﻿import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 function formatText(payload) {
   return [
-    `��ҵ����: ${payload.company || "-"}`,
-    `��ϵ��: ${payload.name || "-"}`,
-    `ְλ: ${payload.title || "-"}`,
-    `��ҵ����: ${payload.email || "-"}`,
-    `��ע��ҵ: ${payload.industry || "-"}`,
+    `企业名称: ${payload.company || "-"}`,
+    `联系人: ${payload.name || "-"}`,
+    `职位: ${payload.title || "-"}`,
+    `企业邮箱: ${payload.email || "-"}`,
+    `关注行业: ${payload.industry || "-"}`,
     "",
-    "��Ŀ����:",
+    "项目需求:",
     payload.message || "-"
   ].join("\n");
 }
@@ -28,12 +28,12 @@ export default async function handler(req, res) {
   const { company, name, title, email, industry, message } = req.body || {};
 
   if (!name || !email || !message) {
-    return res.status(400).json({ message: "��������д��ϵ�ˡ��������Ŀ����" });
+    return res.status(400).json({ message: "请完整填写联系人、邮箱和项目需求。" });
   }
 
   const toEmail = process.env.CONTACT_TO_EMAIL || "zhangliwei.superman@gmail.com";
-  const fromEmail = process.env.CONTACT_FROM_EMAIL || "CCC AI��ѯ <onboarding@resend.dev>";
-  const subject = `��CCC AI��ѯ������ѯ - ${company || name}`;
+  const fromEmail = process.env.CONTACT_FROM_EMAIL || "CCC AI咨询 <onboarding@resend.dev>";
+  const subject = `【CCC AI咨询】新咨询 - ${company || name}`;
 
   try {
     await resend.emails.send({
@@ -41,11 +41,14 @@ export default async function handler(req, res) {
       to: toEmail,
       subject,
       text: formatText({ company, name, title, email, industry, message }),
-      replyTo: email
+      replyTo: email,
+      headers: {
+        "Content-Type": "text/plain; charset=UTF-8"
+      }
     });
 
     return res.status(200).json({ message: "ok" });
   } catch (error) {
-    return res.status(500).json({ message: "�ʼ�����ʧ�ܣ����Ժ����ԡ�" });
+    return res.status(500).json({ message: "邮件发送失败，请稍后再试。" });
   }
 }

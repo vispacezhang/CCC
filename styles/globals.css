@@ -90,6 +90,11 @@ p {
   @apply w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-white focus:border-accent focus:outline-none;
 }
 
+select.select option {
+  color: #0b1523;
+  background-color: #ffffff;
+}
+
 .table-row {
   @apply grid gap-4 rounded-2xl border border-white/10 bg-white/5 p-5 sm:grid-cols-4;
 }
