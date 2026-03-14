@@ -8,7 +8,7 @@ export default function ContactPage() {
     name: "",
     title: "",
     email: "",
-    industry: "ÖÆÔìÒµ",
+    industry: "ï¿½ï¿½ï¿½ï¿½Òµ",
     message: ""
   });
   const [status, setStatus] = useState({ state: "idle", message: "" });
@@ -20,7 +20,7 @@ export default function ContactPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setStatus({ state: "loading", message: "ÕýÔÚÌá½»..." });
+    setStatus({ state: "loading", message: "ï¿½ï¿½ï¿½ï¿½ï¿½á½»..." });
 
     try {
       const response = await fetch("/api/contact", {
@@ -31,22 +31,22 @@ export default function ContactPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data?.message || "Ìá½»Ê§°Ü£¬ÇëÉÔºóÔÙÊÔ¡£");
+        throw new Error(data?.message || "ï¿½á½»Ê§ï¿½Ü£ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½ï¿½Ô¡ï¿½");
       }
 
-      setStatus({ state: "success", message: "Ìá½»³É¹¦£¬ÎÒÃÇ½«¾¡¿ìÁªÏµÄú¡£" });
+      setStatus({ state: "success", message: "ï¿½á½»ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½" });
       setForm({
         company: "",
         name: "",
         title: "",
         email: "",
-        industry: "ÖÆÔìÒµ",
+        industry: "ï¿½ï¿½ï¿½ï¿½Òµ",
         message: ""
       });
     } catch (error) {
       setStatus({
         state: "error",
-        message: error?.message || "Ìá½»Ê§°Ü£¬ÇëÉÔºóÔÙÊÔ¡£"
+        message: error?.message || "ï¿½á½»Ê§ï¿½Ü£ï¿½ï¿½ï¿½ï¿½Ôºï¿½ï¿½ï¿½ï¿½Ô¡ï¿½"
       });
     }
   };
@@ -56,22 +56,22 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>ÁªÏµ | CCC AI×ÉÑ¯</title>
+        <title>ï¿½ï¿½Ïµ | CCC AIï¿½ï¿½Ñ¯</title>
       </Head>
       <section className="section">
         <div className="container-pad">
           <SectionHeader
             eyebrow="Contact"
-            title="Ô¤Ô¼AI×ÉÑ¯"
-            subtitle="Ìá½»ÐèÇó£¬ÎÒÃÇ½«ÔÚ1¸ö¹¤×÷ÈÕÄÚÁªÏµÄú¡£"
+            title="Ô¤Ô¼AIï¿½ï¿½Ñ¯"
+            subtitle="ï¿½á½»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç½ï¿½ï¿½ï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½"
           />
           <div className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <form className="card space-y-4" onSubmit={handleSubmit}>
               <div>
-                <label className="text-sm text-slate-300">ÆóÒµÃû³Æ</label>
+                <label className="text-sm text-slate-300">ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½</label>
                 <input
                   className="input mt-2"
-                  placeholder="¹«Ë¾Ãû³Æ"
+                  placeholder="ï¿½ï¿½Ë¾ï¿½ï¿½ï¿½ï¿½"
                   name="company"
                   value={form.company}
                   onChange={handleChange}
@@ -79,10 +79,10 @@ export default function ContactPage() {
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <label className="text-sm text-slate-300">ÁªÏµÈË</label>
+                  <label className="text-sm text-slate-300">ï¿½ï¿½Ïµï¿½ï¿½</label>
                   <input
                     className="input mt-2"
-                    placeholder="ÐÕÃû"
+                    placeholder="ï¿½ï¿½ï¿½ï¿½"
                     name="name"
                     value={form.name}
                     onChange={handleChange}
@@ -101,7 +101,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div>
-                <label className="text-sm text-slate-300">ÆóÒµÓÊÏä</label>
+                <label className="text-sm text-slate-300">ï¿½ï¿½Òµï¿½ï¿½ï¿½ï¿½</label>
                 <input
                   className="input mt-2"
                   placeholder="name@company.com"
@@ -113,20 +113,20 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label className="text-sm text-slate-300">¹Ø×¢ÐÐÒµ</label>
+                <label className="text-sm text-slate-300">ï¿½ï¿½×¢ï¿½ï¿½Òµ</label>
                 <select className="select mt-2" name="industry" value={form.industry} onChange={handleChange}>
-                  <option>ÖÆÔìÒµ</option>
-                  <option>ÉÌÃ³Á÷Í¨</option>
-                  <option>Å©ÒµºÏ×÷Éç</option>
-                  <option>½¨Öþ¹¤³Ì</option>
-                  <option>ÄÜÔ´·þÎñ</option>
+                  <option>ï¿½ï¿½ï¿½ï¿½Òµ</option>
+                  <option>ï¿½ï¿½Ã³ï¿½ï¿½Í¨</option>
+                  <option>Å©Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</option>
+                  <option>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½</option>
+                  <option>ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½</option>
                 </select>
               </div>
               <div>
-                <label className="text-sm text-slate-300">ÏîÄ¿ÐèÇó</label>
+                <label className="text-sm text-slate-300">ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½</label>
                 <textarea
                   className="input mt-2 min-h-[120px]"
-                  placeholder="ÃèÊöAI×ªÐÍÄ¿±êÓëÍ´µã"
+                  placeholder="ï¿½ï¿½ï¿½ï¿½AI×ªï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Í´ï¿½ï¿½"
                   name="message"
                   value={form.message}
                   onChange={handleChange}
@@ -134,7 +134,7 @@ export default function ContactPage() {
                 />
               </div>
               <button type="submit" className="cta-primary w-full" disabled={!canSubmit}>
-                {status.state === "loading" ? "Ìá½»ÖÐ..." : "Ìá½»Ô¤Ô¼"}
+                {status.state === "loading" ? "ï¿½á½»ï¿½ï¿½..." : "ï¿½á½»Ô¤Ô¼"}
               </button>
               {status.message && (
                 <p
@@ -148,21 +148,21 @@ export default function ContactPage() {
             </form>
             <div className="space-y-6">
               <div className="card">
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">ÁªÏµÐÅÏ¢</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">ï¿½ï¿½Ïµï¿½ï¿½Ï¢</p>
                 <p className="mt-4 text-lg text-white">zhangliwei.superman@gmail.com</p>
-                <p className="mt-2 text-sm text-slate-300">ÎÒÃÇ·þÎñÓÚÖÐ¹ú¼°¶«ÄÏÑÇÆóÒµ¿Í»§¡£</p>
+                <p className="mt-2 text-sm text-slate-300">ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òµï¿½Í»ï¿½ï¿½ï¿½</p>
               </div>
               <div className="card">
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">·þÎñ³ÐÅµ</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">ï¿½ï¿½ï¿½ï¿½ï¿½Åµ</p>
                 <ul className="mt-4 space-y-3 text-sm text-slate-200">
-                  <li>¸ß¹Ü¼¶Õ½ÂÔÕï¶ÏÓëÂ·ÏßÍ¼Êä³ö</li>
-                  <li>AI AgentÊÔµãÓëÒµÎñ±Õ»·½»¸¶</li>
-                  <li>ÆóÒµ¼¶AIÖÎÀíÓë·çÏÕ¿ØÖÆ</li>
+                  <li>ï¿½ß¹Ü¼ï¿½Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½Í¼ï¿½ï¿½ï¿½</li>
+                  <li>AI Agentï¿½Ôµï¿½ï¿½ï¿½Òµï¿½ï¿½Õ»ï¿½ï¿½ï¿½ï¿½ï¿½</li>
+                  <li>ï¿½ï¿½Òµï¿½ï¿½AIï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¿ï¿½ï¿½ï¿½</li>
                 </ul>
               </div>
               <div className="card">
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">°ì¹«µØµã</p>
-                <p className="mt-3 text-sm text-slate-200">ÉÏº£ | ÉîÛÚ | ÐÂ¼ÓÆÂ</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">ï¿½ì¹«ï¿½Øµï¿½</p>
+                <p className="mt-3 text-sm text-slate-200">ï¿½Ïºï¿½ | ï¿½ï¿½ï¿½ï¿½ | ï¿½Â¼ï¿½ï¿½ï¿½</p>
               </div>
             </div>
           </div>
