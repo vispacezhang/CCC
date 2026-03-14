@@ -1,4 +1,4 @@
-import Head from "next/head";
+﻿import Head from "next/head";
 import { useState } from "react";
 import SectionHeader from "../components/SectionHeader";
 
@@ -8,7 +8,7 @@ export default function ContactPage() {
     name: "",
     title: "",
     email: "",
-    industry: "����ҵ",
+    industry: "制造业",
     message: ""
   });
   const [status, setStatus] = useState({ state: "idle", message: "" });
@@ -20,7 +20,7 @@ export default function ContactPage() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    setStatus({ state: "loading", message: "�����ύ..." });
+    setStatus({ state: "loading", message: "正在提交..." });
 
     try {
       const response = await fetch("/api/contact", {
@@ -31,22 +31,22 @@ export default function ContactPage() {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(data?.message || "�ύʧ�ܣ����Ժ����ԡ�");
+        throw new Error(data?.message || "提交失败，请稍后再试。");
       }
 
-      setStatus({ state: "success", message: "�ύ�ɹ������ǽ�������ϵ����" });
+      setStatus({ state: "success", message: "提交成功，我们将尽快联系您。" });
       setForm({
         company: "",
         name: "",
         title: "",
         email: "",
-        industry: "����ҵ",
+        industry: "制造业",
         message: ""
       });
     } catch (error) {
       setStatus({
         state: "error",
-        message: error?.message || "�ύʧ�ܣ����Ժ����ԡ�"
+        message: error?.message || "提交失败，请稍后再试。"
       });
     }
   };
@@ -56,22 +56,22 @@ export default function ContactPage() {
   return (
     <>
       <Head>
-        <title>��ϵ | CCC AI��ѯ</title>
+        <title>联系 | CCC AI咨询</title>
       </Head>
       <section className="section">
         <div className="container-pad">
           <SectionHeader
             eyebrow="Contact"
-            title="ԤԼAI��ѯ"
-            subtitle="�ύ�������ǽ���1������������ϵ����"
+            title="预约AI咨询"
+            subtitle="提交需求，我们将在1个工作日内联系您。"
           />
           <div className="mt-10 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
             <form className="card space-y-4" onSubmit={handleSubmit}>
               <div>
-                <label className="text-sm text-slate-300">��ҵ����</label>
+                <label className="text-sm text-slate-300">企业名称</label>
                 <input
                   className="input mt-2"
-                  placeholder="��˾����"
+                  placeholder="公司名称"
                   name="company"
                   value={form.company}
                   onChange={handleChange}
@@ -79,10 +79,10 @@ export default function ContactPage() {
               </div>
               <div className="grid gap-4 sm:grid-cols-2">
                 <div>
-                  <label className="text-sm text-slate-300">��ϵ��</label>
+                  <label className="text-sm text-slate-300">联系人</label>
                   <input
                     className="input mt-2"
-                    placeholder="����"
+                    placeholder="姓名"
                     name="name"
                     value={form.name}
                     onChange={handleChange}
@@ -90,10 +90,10 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <label className="text-sm text-slate-300">ְλ</label>
+                  <label className="text-sm text-slate-300">职位</label>
                   <input
                     className="input mt-2"
-                    placeholder="ְλ"
+                    placeholder="职位"
                     name="title"
                     value={form.title}
                     onChange={handleChange}
@@ -101,7 +101,7 @@ export default function ContactPage() {
                 </div>
               </div>
               <div>
-                <label className="text-sm text-slate-300">��ҵ����</label>
+                <label className="text-sm text-slate-300">企业邮箱</label>
                 <input
                   className="input mt-2"
                   placeholder="name@company.com"
@@ -113,20 +113,20 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <label className="text-sm text-slate-300">��ע��ҵ</label>
+                <label className="text-sm text-slate-300">关注行业</label>
                 <select className="select mt-2" name="industry" value={form.industry} onChange={handleChange}>
-                  <option>����ҵ</option>
-                  <option>��ó��ͨ</option>
-                  <option>ũҵ������</option>
-                  <option>��������</option>
-                  <option>��Դ����</option>
+                  <option>制造业</option>
+                  <option>商贸流通</option>
+                  <option>农业合作社</option>
+                  <option>建筑工程</option>
+                  <option>能源服务</option>
                 </select>
               </div>
               <div>
-                <label className="text-sm text-slate-300">��Ŀ����</label>
+                <label className="text-sm text-slate-300">项目需求</label>
                 <textarea
                   className="input mt-2 min-h-[120px]"
-                  placeholder="����AIת��Ŀ����ʹ��"
+                  placeholder="描述AI转型目标与痛点"
                   name="message"
                   value={form.message}
                   onChange={handleChange}
@@ -134,7 +134,7 @@ export default function ContactPage() {
                 />
               </div>
               <button type="submit" className="cta-primary w-full" disabled={!canSubmit}>
-                {status.state === "loading" ? "�ύ��..." : "�ύԤԼ"}
+                {status.state === "loading" ? "提交中..." : "提交预约"}
               </button>
               {status.message && (
                 <p
@@ -148,21 +148,21 @@ export default function ContactPage() {
             </form>
             <div className="space-y-6">
               <div className="card">
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">��ϵ��Ϣ</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">联系信息</p>
                 <p className="mt-4 text-lg text-white">zhangliwei.superman@gmail.com</p>
-                <p className="mt-2 text-sm text-slate-300">���Ƿ������й�����������ҵ�ͻ���</p>
+                <p className="mt-2 text-sm text-slate-300">我们服务于中国及东南亚企业客户。</p>
               </div>
               <div className="card">
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">�����ŵ</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">服务承诺</p>
                 <ul className="mt-4 space-y-3 text-sm text-slate-200">
-                  <li>�߹ܼ�ս�������·��ͼ���</li>
-                  <li>AI Agent�Ե���ҵ��ջ�����</li>
-                  <li>��ҵ��AI��������տ���</li>
+                  <li>高管级战略诊断与路线图输出</li>
+                  <li>AI Agent试点与业务闭环交付</li>
+                  <li>企业级AI治理与风险控制</li>
                 </ul>
               </div>
               <div className="card">
-                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">�칫�ص�</p>
-                <p className="mt-3 text-sm text-slate-200">�Ϻ� | ���� | �¼���</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-slate-400">办公地点</p>
+                <p className="mt-3 text-sm text-slate-200">上海 | 深圳 | 新加坡</p>
               </div>
             </div>
           </div>
