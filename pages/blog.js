@@ -6,7 +6,7 @@ const posts = [
   {
     title: "AI+制造专项行动实施意见要点",
     date: "2026-01-07",
-    summary: "从政策信号到企业行动的三条主线。",
+    summary: "政策信号指向制造业AI落地的三条主线。",
     href: "/insights/ai-plus-manufacturing-2026"
   },
   {
@@ -22,9 +22,9 @@ const posts = [
     href: "/insights/agentic-ai-supply-chain-2026"
   },
   {
-    title: "企业AI规模化路径",
-    date: "2025-04-09",
-    summary: "从试点走向价值闭环的关键能力。",
+    title: "算力基础设施升级与企业AI规模化",
+    date: "2025-08-14",
+    summary: "算力、数据与网络底座决定AI规模化速度。",
     href: "/insights/enterprise-ai-scale-2025"
   }
 ];
@@ -63,4 +63,3 @@ export default function BlogPage() {
     </>
   );
 }
-

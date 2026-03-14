@@ -21,8 +21,8 @@ export default function InsightAgenticAiSupplyChain() {
               </p>
               <h1 className="mt-4 text-2xl font-semibold text-white">Agentic AI将重塑供应链岗位与流程</h1>
               <p className="mt-4 text-sm text-slate-200">
-                最新行业调研指出，超过一半的供应链负责人预计未来五年内，
-                Agentic AI将降低初级岗位需求，并推动供应链决策机制的再设计。
+                最新行业调研显示，超过一半的供应链负责人预计未来几年内，
+                Agentic AI将减少入门级岗位需求，并推动供应链决策机制再设计。
               </p>
             </div>
 

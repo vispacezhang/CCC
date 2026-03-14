@@ -2,13 +2,29 @@
 import { useState } from "react";
 import SectionHeader from "../components/SectionHeader";
 
+const industries = [
+  "传统制造业（中小工厂为主）",
+  "批发 / 零售（中小商家、夫妻店、区域连锁）",
+  "餐饮（中小餐馆、奶茶店、连锁加盟店）",
+  "建筑 / 工程 / 装修行业",
+  "物流与专线货运（三方物流、专线、车队）",
+  "农业 / 种植养殖",
+  "本地生活服务（家政、维修、美业、搬家）",
+  "教培 / 职业技能（中小机构、工作室）",
+  "医疗健康（诊所、体检中心、康复机构）",
+  "财税 / 代账 / 小微企业服务",
+  "人力资源（中小工厂 / 服务业招聘）",
+  "物业管理 / 园区运营",
+  "其他"
+];
+
 export default function ContactPage() {
   const [form, setForm] = useState({
     company: "",
     name: "",
     title: "",
     email: "",
-    industry: "制造业",
+    industry: industries[0],
     message: ""
   });
   const [status, setStatus] = useState({ state: "idle", message: "" });
@@ -40,7 +56,7 @@ export default function ContactPage() {
         name: "",
         title: "",
         email: "",
-        industry: "制造业",
+        industry: industries[0],
         message: ""
       });
     } catch (error) {
@@ -114,12 +130,17 @@ export default function ContactPage() {
               </div>
               <div>
                 <label className="text-sm text-slate-300">关注行业</label>
-                <select className="select mt-2" name="industry" value={form.industry} onChange={handleChange}>
-                  <option>制造业</option>
-                  <option>商贸流通</option>
-                  <option>农业合作社</option>
-                  <option>建筑工程</option>
-                  <option>能源服务</option>
+                <select
+                  className="select mt-2"
+                  name="industry"
+                  value={form.industry}
+                  onChange={handleChange}
+                >
+                  {industries.map((item) => (
+                    <option key={item} value={item}>
+                      {item}
+                    </option>
+                  ))}
                 </select>
               </div>
               <div>

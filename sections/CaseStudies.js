@@ -2,22 +2,22 @@
 
 const cases = [
   {
-    title: "AI订单自动处理系统",
-    before: "人工处理订单需要4小时。",
-    after: "AI Agent自动解析订单并生成报价。",
-    result: "处理时间缩短到15分钟。"
+    title: "制造业视觉质检Agent",
+    before: "质检依赖人工目检，误判与漏检频繁。",
+    after: "AI视觉模型自动识别缺陷并生成质检报告。",
+    result: "质检效率提升3倍，缺陷漏检率下降70%。"
   },
   {
-    title: "智能库存预测引擎",
-    before: "库存预测依赖经验，缺货率高。",
-    after: "AI预测模型实时调度补货策略。",
-    result: "库存周转率提升27%。"
+    title: "餐饮智能备货与损耗预测",
+    before: "门店备货靠经验，损耗高且断货频繁。",
+    after: "AI预测客流与销量，自动生成备货建议。",
+    result: "食材损耗降低28%，缺货率下降35%。"
   },
   {
-    title: "供应链异常预警",
-    before: "供应链风险反馈滞后。",
-    after: "AI Agent监控异常并自动触发预案。",
-    result: "异常响应时间降低60%。"
+    title: "物流专线智能调度",
+    before: "电话与微信群调度，装载率低。",
+    after: "AI优化路线与装载方案，实时监控异常。",
+    result: "装载率提升22%，运输成本下降18%。"
   }
 ];
 
@@ -55,4 +55,3 @@ export default function CaseStudies() {
     </section>
   );
 }
-

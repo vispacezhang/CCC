@@ -21,7 +21,7 @@ export default function InsightAiContentLabeling() {
               </p>
               <h1 className="mt-4 text-2xl font-semibold text-white">从“可用”走向“可控”的企业AI内容治理</h1>
               <p className="mt-4 text-sm text-slate-200">
-                生成合成内容标识办法及配套标准的推进，意味着企业必须在AI内容生成、分发与存档环节建立统一治理，
+                《人工智能生成合成内容标识办法》的发布意味着企业必须在AI内容生成、分发与存档环节建立统一治理，
                 确保可追溯、可识别、可审计。
               </p>
             </div>
@@ -32,7 +32,7 @@ export default function InsightAiContentLabeling() {
                 <div className="mt-4 space-y-3 text-sm text-slate-200">
                   <p>市场传播、客服回复、培训内容、知识库输出等场景将纳入标识与留痕要求。</p>
                   <p>企业需建立统一的AI内容标识策略，避免多团队各自为政。</p>
-                  <p>对外输出的内容需要“合规标签”，对内流程需要“审计链路”。</p>
+                  <p>对外输出内容需要合规提示，对内流程需要审计链路。</p>
                 </div>
               </div>
               <div className="card">

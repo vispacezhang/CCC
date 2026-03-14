@@ -5,42 +5,42 @@ export default function InsightEnterpriseAiScale() {
   return (
     <>
       <Head>
-        <title>企业AI规模化路径 | CCC AI咨询</title>
+        <title>算力基础设施升级与企业AI规模化 | CCC AI咨询</title>
       </Head>
       <section className="section">
         <div className="container-pad">
           <SectionHeader
             eyebrow="Insight"
-            title="企业AI规模化路径"
-            subtitle="从试点走向价值闭环的关键能力。"
+            title="算力基础设施升级与企业AI规模化"
+            subtitle="算力、网络与数据底座决定AI规模化速度。"
           />
           <article className="mt-10 space-y-8">
             <div className="card">
               <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
-                行业洞察 · 2025-04-09 · 张大威撰写
+                基础设施 · 2025-08-14 · 张大威撰写
               </p>
-              <h1 className="mt-4 text-2xl font-semibold text-white">企业AI进入规模化阶段</h1>
+              <h1 className="mt-4 text-2xl font-semibold text-white">AI规模化的关键前提正在形成</h1>
               <p className="mt-4 text-sm text-slate-200">
-                最新企业AI报告显示，生成式AI已从探索期进入规模化应用期，
-                企业更关注安全、治理、组织协同与业务价值的可衡量产出。
+                数字基础设施的加速建设，意味着企业AI从试点走向规模化的“底座”正在完善。
+                算力规模、网络覆盖与数据枢纽能力的提升，将直接决定AI转型节奏。
               </p>
             </div>
 
             <div className="grid gap-6 lg:grid-cols-2">
               <div className="card">
-                <h2 className="text-lg font-semibold text-white">规模化的三大门槛</h2>
+                <h2 className="text-lg font-semibold text-white">趋势信号</h2>
                 <div className="mt-4 space-y-3 text-sm text-slate-200">
-                  <p>数据资产与流程标准化不足，导致AI无法稳定接入。</p>
-                  <p>缺少统一的AI治理与安全框架，难以跨部门推广。</p>
-                  <p>业务KPI与AI价值未打通，缺乏可持续投入依据。</p>
+                  <p>全国算力规模快速提升，AI训练与推理成本持续下降。</p>
+                  <p>5G与算力网络完善，为工业互联网与现场AI部署提供条件。</p>
+                  <p>数据基础设施建设加速，企业数据资产化门槛降低。</p>
                 </div>
               </div>
               <div className="card">
-                <h2 className="text-lg font-semibold text-white">落地路线建议</h2>
+                <h2 className="text-lg font-semibold text-white">企业行动建议</h2>
                 <div className="mt-4 space-y-3 text-sm text-slate-200">
-                  <p>建立“价值驱动”的场景优先级机制，先解决高收益流程。</p>
-                  <p>建设企业级AI能力平台与知识库，减少重复开发。</p>
-                  <p>设定“90天验证 + 180天推广”的双阶段节奏。</p>
+                  <p>建立“算力+数据+业务”协同规划，避免孤岛式AI建设。</p>
+                  <p>提前布局知识库与数据治理，提升AI落地效率。</p>
+                  <p>以可量化KPI驱动AI投资回报，形成规模化路径。</p>
                 </div>
               </div>
             </div>

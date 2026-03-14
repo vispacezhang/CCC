@@ -17,30 +17,30 @@ export default function InsightAiPlusManufacturing() {
           <article className="mt-10 space-y-8">
             <div className="card">
               <p className="text-xs uppercase tracking-[0.2em] text-slate-400">
-                发布视角 · 2026-01-07 · 张大威撰写
+                政策解读 · 2026-01-07 · 张大威撰写
               </p>
               <h1 className="mt-4 text-2xl font-semibold text-white">制造企业的AI落地进入“行动期”</h1>
               <p className="mt-4 text-sm text-slate-200">
-                近期“AI+制造”专项行动实施意见的发布，释放出强烈信号：AI不再停留在工具层面，
-                而是以制造业场景为牵引，加速进入流程、系统与组织能力的重构阶段。
+                近日，工信部等部门印发《“人工智能+制造”专项行动实施意见》，
+                释放出明确信号：AI将从工具层面进入生产流程与组织能力的系统性重构阶段。
               </p>
             </div>
 
             <div className="grid gap-6 lg:grid-cols-2">
               <div className="card">
-                <h2 className="text-lg font-semibold text-white">政策要点解读</h2>
+                <h2 className="text-lg font-semibold text-white">政策信号</h2>
                 <div className="mt-4 space-y-3 text-sm text-slate-200">
-                  <p>政策聚焦“场景牵引 + 数据支撑 + 系统集成”，鼓励企业把AI嵌入关键生产与经营流程。</p>
-                  <p>强调工业数据治理与工业软件能力，为智能工厂与供应链协同奠定基础。</p>
-                  <p>释放“可复制、可规模化”的落地方向，避免仅在试点层面停留。</p>
+                  <p>以制造场景为牵引，加速AI在生产、质检、供应链、能耗等关键流程的落地。</p>
+                  <p>强调工业数据资产与系统集成能力，为规模化应用打基础。</p>
+                  <p>鼓励形成可复制、可推广的行业解决方案。</p>
                 </div>
               </div>
               <div className="card">
                 <h2 className="text-lg font-semibold text-white">企业行动建议</h2>
                 <div className="mt-4 space-y-3 text-sm text-slate-200">
-                  <p>建立AI场景清单与价值评估框架，优先选择可闭环的流程。</p>
-                  <p>同步推进数据资产化与流程标准化，减少“AI无法接入”的断层。</p>
-                  <p>搭建AI治理机制，明确安全、责任与迭代节奏。</p>
+                  <p>建立AI场景清单与ROI评估机制，优先选择闭环流程。</p>
+                  <p>同步推进数据治理与流程标准化，降低AI接入成本。</p>
+                  <p>搭建AI治理与安全机制，保证可持续迭代。</p>
                 </div>
               </div>
             </div>
